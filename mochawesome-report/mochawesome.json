@@ -1,0 +1,256 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-08T12:16:15.472Z",
+    "end": "2026-11-08T12:17:02.185Z",
+    "duration": 46713,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "57cf44e4-05a7-4ff4-ae60-bdce85026dd1",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8647b273-f2e6-4c87-8e5d-8af252440d0c",
+          "title": "Successful login",
+          "fullFile": "C:\\Users\\babub\\OneDrive\\Desktop\\MyStuff\\BabusWebStuff\\RostoRM\\QA_Learning\\saucedemo-automation-tests\\test\\index.js",
+          "file": "\\test\\index.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Successful login\"",
+              "fullTitle": "Successful login \"before each\" hook in \"Successful login\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(\"This is before each test - Functional Test Suite\");\naddContext(this, \"Where should i see it\");",
+              "err": {},
+              "uuid": "6788dc36-4d4a-491e-bbd5-6e6598cd0135",
+              "parentUUID": "8647b273-f2e6-4c87-8e5d-8af252440d0c",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Successful login\"",
+              "fullTitle": "Successful login \"after each\" hook in \"Successful login\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(\"End of Test - Functional Test Suite\");\n// addContext(this, \"Where should i see it after lets see where it goes\");",
+              "err": {},
+              "uuid": "8274b051-2379-4ab8-9539-96b5f7556be3",
+              "parentUUID": "8647b273-f2e6-4c87-8e5d-8af252440d0c",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Tc001 - Allow a valid user to login to site",
+              "fullTitle": "Successful login Tc001 - Allow a valid user to login to site",
+              "timedOut": false,
+              "duration": 9529,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  \"Where should i see it\",\n  \".././mochawesome-report/images/1794140177686.png\",\n  \".././mochawesome-report/images/1794140177719.png\"\n]",
+              "code": "let orgDriver = await new Builder().forBrowser(Browser.FIREFOX).build();\nconst tcData = await readData(\"tc001\");\ntry {\n  console.log(\"TC001 entry\");\n  await login(orgDriver, tcData.data.username, tcData.data.password);\n  // First Screenshot\n  let screenshotPath = await takeScreenshot(orgDriver);\n  addContext(this, \"../\" + screenshotPath);\n  await sanityCheckPageLoad(orgDriver, tcData.data.expectedText);\n  // addContext(this, \"This is where our evidence will go\");\n  //Second Screenshot\n  screenshotPath = await takeScreenshot(orgDriver);\n  addContext(this, \"../\" + screenshotPath);\n  await new Promise(function (resolve) {\n    setTimeout(resolve, 7000);\n  });\n  console.log(\"Our test tc001 was run successfully, Gip Gip Ura Ura\");\n} catch (error) {\n  console.log(\"Test encountered an error:\", error);\n  throw error;\n} finally {\n  await orgDriver.quit();\n  console.log(\"TC001 Exit\");\n}",
+              "err": {},
+              "uuid": "fd1f2ed7-8a63-4bb9-af66-4f7952bb7eaa",
+              "parentUUID": "8647b273-f2e6-4c87-8e5d-8af252440d0c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fd1f2ed7-8a63-4bb9-af66-4f7952bb7eaa"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9529,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        },
+        {
+          "uuid": "bf010d05-14f7-4904-b6dd-00b7ab6b530e",
+          "title": "Login with invalid credentials",
+          "fullFile": "C:\\Users\\babub\\OneDrive\\Desktop\\MyStuff\\BabusWebStuff\\RostoRM\\QA_Learning\\saucedemo-automation-tests\\test\\index2.js",
+          "file": "\\test\\index2.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Login with invalid credentials\"",
+              "fullTitle": "Login with invalid credentials \"before each\" hook in \"Login with invalid credentials\"",
+              "timedOut": false,
+              "duration": 1,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(\"This is before each test - Regression Test Suite\");",
+              "err": {},
+              "uuid": "6a8bf53c-169d-43f6-814f-fc95165f9186",
+              "parentUUID": "bf010d05-14f7-4904-b6dd-00b7ab6b530e",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Login with invalid credentials\"",
+              "fullTitle": "Login with invalid credentials \"after each\" hook in \"Login with invalid credentials\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(\"End of Test - Regression Test Suite\");",
+              "err": {},
+              "uuid": "e7242124-c09e-49c6-92b3-f80cb38918a4",
+              "parentUUID": "bf010d05-14f7-4904-b6dd-00b7ab6b530e",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "TC002 - Should not allow login for an invalid credentials",
+              "fullTitle": "Login with invalid credentials TC002 - Should not allow login for an invalid credentials",
+              "timedOut": false,
+              "duration": 9337,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  \".././mochawesome-report/images/1794140187041.png\",\n  \".././mochawesome-report/images/1794140187068.png\"\n]",
+              "code": "let orgDriver = await new Builder().forBrowser(Browser.FIREFOX).build();\nconst tcData = await readData(\"tc002\");\ntry {\n  console.log(\"TC002 entry\");\n  await login(orgDriver, tcData.data.username, tcData.data.password);\n  // First Screenshot\n  let screenshotPath = await takeScreenshot(orgDriver);\n  addContext(this, \"../\" + screenshotPath);\n  //\n  await sanityCheckInvalidLogin(orgDriver, tcData.data.expectedText);\n  // First Screenshot\n  screenshotPath = await takeScreenshot(orgDriver);\n  addContext(this, \"../\" + screenshotPath);\n  //\n  await new Promise((resolve) => setTimeout(resolve, 7000));\n  console.log(\"Our test tc002 was run successfully, Gip Gip Ura Ura\");\n} catch (error) {\n  console.log(\"Test encountered an error:\", error);\n  throw error;\n} finally {\n  await orgDriver.quit();\n  console.log(\"TC002 Exit\");\n}",
+              "err": {},
+              "uuid": "89804c7e-4f68-4ca0-8ca8-a1f350caf206",
+              "parentUUID": "bf010d05-14f7-4904-b6dd-00b7ab6b530e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "89804c7e-4f68-4ca0-8ca8-a1f350caf206"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9337,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        },
+        {
+          "uuid": "45ebe806-172a-468c-90aa-8b5403acb714",
+          "title": "Complete product checkout",
+          "fullFile": "C:\\Users\\babub\\OneDrive\\Desktop\\MyStuff\\BabusWebStuff\\RostoRM\\QA_Learning\\saucedemo-automation-tests\\test\\index3_tc007.js",
+          "file": "\\test\\index3_tc007.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tc007 - Allow a valid user to login to site and make checkout",
+              "fullTitle": "Complete product checkout Tc007 - Allow a valid user to login to site and make checkout",
+              "timedOut": false,
+              "duration": 27845,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  \".././mochawesome-report/images/1794140196440.png\",\n  \".././mochawesome-report/images/1794140214900.png\"\n]",
+              "code": "let orgDriver = await new Builder().forBrowser(Browser.FIREFOX).build();\nconst tcData = await readData(\"tc007\");\ntry {\n  await login(orgDriver, tcData.data.username, tcData.data.password);\n  // First Screenshot\n  let screenshotPath = await takeScreenshot(orgDriver);\n  addContext(this, \"../\" + screenshotPath);\n  // Add product and open shopping cart\n  await checkoutFunction(orgDriver);\n  // Validate product in shopping cart\n  await sanityCheckShoppingCart(orgDriver, tcData.data.ShoppingCardText);\n  await finishCheckoutFunction(orgDriver, tcData.form.firstName, tcData.form.lastName, tcData.form.zip);\n  // Validate successful checkout\n  await sanityCheckCheckout(orgDriver, tcData.data.expectedOrderText);\n  // second Screenshot\n  screenshotPath = await takeScreenshot(orgDriver);\n  addContext(this, \"../\" + screenshotPath);\n  await new Promise(function (resolve) {\n    setTimeout(resolve, 7000);\n  });\n  console.log(\"Our test tc001 was run successfully, Gip Gip Ura Ura\");\n} catch (error) {\n  console.log(\"Test encountered an error:\", error);\n  throw error;\n} finally {\n  await orgDriver.quit();\n  console.log(\"TC001 Exit\");\n}",
+              "err": {},
+              "uuid": "bb340350-58fd-49e2-b6c2-273b9b2a3c53",
+              "parentUUID": "45ebe806-172a-468c-90aa-8b5403acb714",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bb340350-58fd-49e2-b6c2-273b9b2a3c53"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 27845,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "12.0.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "charts": "true"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

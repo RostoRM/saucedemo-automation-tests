@@ -1,0 +1,38 @@
+[
+  {
+    "testName": "global",
+    "data": {
+      "url": "https://www.saucedemo.com/"
+    }
+  },
+  {
+    "testName": "tc001",
+    "data": {
+      "username": "standard_user",
+      "password": "secret_sauce",
+      "expectedText": "Swag Labs"
+    }
+  },
+  {
+    "testName": "tc002",
+    "data": {
+      "username": "standard_user_not",
+      "password": "secret_sauce_notPassword",
+      "expectedText": "Epic sadface: Username and password do not match any user in this service"
+    }
+  },
+  {
+    "testName": "tc007",
+    "data": {
+      "username": "standard_user",
+      "password": "secret_sauce",
+      "ShoppingCardText": "Sauce Labs Backpack",
+      "expectedOrderText": "Thank you for your order!"
+    },
+    "form": {
+      "firstName": "George",
+      "lastName": "Smith",
+      "zip": "19801"
+    }
+  }
+]
