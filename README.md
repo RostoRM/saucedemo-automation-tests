@@ -2,15 +2,15 @@
 
 ## About the Project
 
-This is a practice automation testing project developed using JavaScript and Selenium WebDriver.
+This is a practice test automation project developed using JavaScript and Selenium WebDriver.
 
-The project focuses on automating UI test scenarios on the [SauceDemo](https://www.saucedemo.com/) website. It uses Mocha as the testing framework, Chai for assertions, and Mochawesome for generating test reports.
+The project focuses on automating UI test scenarios on the [SauceDemo](https://www.saucedemo.com/) website. It uses Mocha as the testing framework, Chai for assertions, and Mochawesome for generating HTML test reports.
 
 ## Technologies & Tools
 
 - **JavaScript (ES Modules)** – Programming language
 - **Selenium WebDriver** – Browser automation
-- **Mocha** – Test framework
+- **Mocha** – Testing framework
 - **Chai** – Assertion library
 - **Mochawesome** – HTML test reporting
 - **Node.js & npm** – Runtime and package management
@@ -104,21 +104,23 @@ npm install
 
 ### 4. Run automated tests
 
+To execute the complete test suite and generate a Mochawesome report:
+
 ```bash
-npx mocha --no-timeouts
+npm test
 ```
 
 To run a specific test file:
 
 ```bash
-npx mocha --no-timeouts test/index3_tc007.js
+npx mocha --no-timeouts --reporter mochawesome --require mochawesome/register --reporter-options charts=true test/index3_tc007.js
 ```
 
 ## Test Reports
 
 Mochawesome is used to generate HTML test reports containing test execution results and screenshots.
 
-After executing the tests, the report can be found in:
+After executing the tests, the report can be found at:
 
 ```text
 mochawesome-report/mochawesome.html
