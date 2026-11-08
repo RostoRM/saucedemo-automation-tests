@@ -19,7 +19,7 @@ The project focuses on automating UI test scenarios on the [SauceDemo](https://w
 ## Project Structure
 
 ```text
-tc007-withMocha/
+saucedemo-automation-tests/
 │
 ├── test/
 │   ├── index.js
