@@ -12,12 +12,10 @@ import { login, sanityCheckPageLoad, readData, takeScreenshot } from "../functio
 describe("Successful login", async function () {
   beforeEach(function () {
     console.log("This is before each test - Functional Test Suite");
-    addContext(this, "Where should i see it");
   });
 
   afterEach(function () {
     console.log("End of Test - Functional Test Suite");
-    // addContext(this, "Where should i see it after lets see where it goes");
   });
 
   it("Tc001 - Allow a valid user to login to site", async function () {
@@ -35,7 +33,6 @@ describe("Successful login", async function () {
 
       await sanityCheckPageLoad(orgDriver, tcData.data.expectedText);
 
-      // addContext(this, "This is where our evidence will go");
       //Second Screenshot
       screenshotPath = await takeScreenshot(orgDriver);
       addContext(this, "../" + screenshotPath);
