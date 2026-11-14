@@ -37,7 +37,7 @@ describe("Complete product checkout", async function () {
         setTimeout(resolve, 7000);
       });
 
-      console.log("Our test tc001 was run successfully, Gip Gip Ura Ura");
+      console.log("Our test tc007 was run successfully, Gip Gip Ura Ura");
     } catch (error) {
       console.log("Test encountered an error:", error);
       throw error;
